@@ -1,0 +1,18 @@
+.jumbotron {
+  background-image: url("/assets/img/burgerpic1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 3%;
+}
+#leftside {
+  background-color: #5c5c5c;
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+}
+#rightside {
+  background-color: #e49322;
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+}
