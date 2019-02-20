@@ -7,8 +7,8 @@
         <panel>
             <form class="create-form">
                 <div class="form-group">
-                    <label for="frshburger">Order Fresh Burger</label>
-                    <input type="text" id="frshburger" name="burger">
+                    <label for="newburger">Order Fresh Burger</label>
+                    <input type="text" id="newburger" name="burger">
                     <button type="submit" class="btn btn-success" id="addburger">
                         <span class="fa fa-thumbs-up"></span>
                     </button>
@@ -21,16 +21,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading" id="leftside"><strong>Order Your Burger</strong></div>
                 <div class="panel-body">
-                    <ul>
-                        {{#each burgers}}
-                        {{#unless devoured}}
-                        <span><strong>{{this.id}} - {{this.burger_name}}</strong></span>
-                        <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}"><span class="fa fa-cutlery"></span></button>
-                        <hr>
-                        {{/unless}}
-                        {{/each}}
-                    </ul>
+                    <h4>add content here</h4>
                 </div>
             </div>
         </div>
@@ -38,16 +29,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading" id="rightside"><strong>Devour the Burgers</strong></div>
                 <div class="panel-body">
-                    <ul>
-                        {{#each burgers}}
-                        {{#if devoured}}
-                        <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
-                        <button type="button" class="trashburger btn btn-danger" id="trashbutton" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button>
-                        <hr>
-                        {{/if}}
-                        {{/each}}
-                    </ul>
+                    <h4>add content here</h4>
                 </div>
             </div>
         </div>
