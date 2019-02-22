@@ -1,9 +1,10 @@
 <div class="container">
 
     <div class="jumbotron">
-        <h1>Eat Some Burgers</h1>
-        <p>Make the Burgers. Eat the Burgers.</p>
-        <h2>Make your Burger</h2>
+        <h1>Order Burger for Pick up</h1>
+        <p>Burger Orders, Burger Pickup.</p>
+        <br>
+        <h2>Select a Burger or Sandwich</h2>
         <panel>
             <form class="create-form">
                 <div class="form-group">
@@ -21,7 +22,19 @@
             <div class="panel panel-default">
                 <div class="panel-heading" id="leftside"><strong>Order Your Burger</strong></div>
                 <div class="panel-body">
-                    <h4>add content here</h4>
+
+                    <ul>
+                        {{#each burgers}}
+                        {{#unless devoured}}
+
+                        <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
+                        <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}"><span class="fa fa-usd"></span></button>
+                        <hr>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+
                 </div>
             </div>
         </div>
@@ -29,7 +42,19 @@
             <div class="panel panel-default">
                 <div class="panel-heading" id="rightside"><strong>Devour the Burgers</strong></div>
                 <div class="panel-body">
-                    <h4>add content here</h4>
+                    <ul>
+                        {{#each burgers}}
+                        {{#if devoured}}
+                        <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
+                        <button type="button" class="trashburger btn btn-danger" id="trashbutton" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button>
+                        <hr>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+
+
+
                 </div>
             </div>
         </div>
